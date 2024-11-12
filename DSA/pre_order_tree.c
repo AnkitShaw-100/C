@@ -26,7 +26,6 @@ void preorder(struct node *root) {
 }
 
 int main() {
-    // Manually creating nodes and linking them
     struct node *root = createNode(1);
     root->left = createNode(2);
     root->right = createNode(3);

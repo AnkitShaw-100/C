@@ -3,7 +3,7 @@
 #define MAX_SIZE 5 
 
 int stack[MAX_SIZE]; 
-int top = -1; // Define top globally and initialize to -1
+int top = -1; 
 
 void push() {
     int x; 

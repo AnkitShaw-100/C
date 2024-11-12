@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h> // For malloc and free
+#include <stdlib.h> 
 
 #define MAX_SIZE 5 
 
@@ -8,17 +8,17 @@ struct Node {
     struct Node *link;
 };
 
-struct Node *top = NULL; // Initialize top to NULL
+struct Node *top = NULL; 
 
 void push(int x) {
     struct Node *newNode = (struct Node*) malloc(sizeof(struct Node)); // Allocate memory for new node
-    if (newNode == NULL) { // Check for memory allocation failure
+    if (newNode == NULL) { 
         printf("Memory allocation failed!\n");
         return;
     }
-    newNode->data = x; // Set the data
-    newNode->link = top; // Link new node to the previous top
-    top = newNode; // Update top to the new node
+    newNode->data = x; 
+    newNode->link = top; 
+    top = newNode; 
     printf("Pushed %d onto the stack\n", x);
 }
 
@@ -50,8 +50,8 @@ void pop() {
     } else {
         struct Node *temp = top;
         printf("Popped element is %d\n", top->data);
-        top = top->link; // Move top to the next node
-        free(temp); // Free the memory of the popped node
+        top = top->link; 
+        free(temp); 
     }
 }
 
